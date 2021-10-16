@@ -3,8 +3,10 @@
 }
 
 body {
-	background: #FAEBD7 url('../images/vintage-concrete.png');
-	color: #333;
+	/* background: #FAEBD7 url('../images/vintage-concrete.png'); */
+	font-family: 'Brother 1816', sans-serif;
+	color: #333333;
+	background-color: #ebebeb;
 }
 
 a {
@@ -12,38 +14,55 @@ a {
 	color: #333;
 }
 
-a:hover { color: Tomato; }
+a:hover { color: #b40303; }
 
-header, nav, main, footer {
-	width: 80%;
+header, nav, main, footer, img {
+	width: 60%;
 	margin: auto;
 }
 
 
 /* Header styles */
 header { 
-	background-color: #000;
-	color: BlanchedAlmond;
 	min-height: 100px;
-	margin-top: 60px;
-	background-image: url("../images/stars.jpeg");
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+
 }
+
 
 header h1 {
-	padding: 40px 60px;
+	padding: 60px 40px;
+	text-align: center;
+	font-family: brother-1816, sans-serif;
+	font-weight: 800;
+	font-style: normal;
 	font-size: 48px;
+	color: #333333;
 }
 
+img {
+	min-width: 300px;
+	max-width:400px;
+	display: flex-end;
+ }
 
 /* Nav styles */
-nav { background-color: #333; }
+nav { background-color:#333333; }
 nav ul { 
 	display: flex;
 	justify-content: flex-end;
 }
-nav li { padding: 10px 10px; }
-nav a { color: BlanchedAlmond; }
-nav a:hover { color: white; }
+nav li { 
+	padding: 10px 30px; 
+	font-family: brother-1816, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+nav a { color: white; }
+nav a:hover { color: #b40303; }
 
 
 /* Main styles */
@@ -52,7 +71,12 @@ main {
 	display: grid;
 	grid-template-columns: 60% 40%;
 }
+h2 {
+	font-family: brother-1816, sans-serif;
+	font-weight: 900;
+	font-style: normal;
 
+}
 section {
 	padding: 40px 60px;
 }
@@ -70,7 +94,7 @@ aside {
 
 /* Footer styles */
 footer { 
-	background-color: #000;
+	background-color: #333333;
 	color: white;
 	text-align: center;
  }
