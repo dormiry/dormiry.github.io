@@ -10,6 +10,10 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* FONTS */
 @font-face {
   font-family: "bluunext-bold";
@@ -33,7 +37,7 @@ html {
 }
 
 body {
-  width: 80vw;
+  width: 90vw;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -89,6 +93,7 @@ body {
   color: #212220;
 }
 
+/* FOOTER */
 footer {
   width: 100%;
   height: 70px;
@@ -123,6 +128,7 @@ footer {
   font-size: 1.05em;
 }
 
+/* CONTACT PAGE */
 .contact {
   width: 100%;
   height: 75vh;
@@ -178,6 +184,101 @@ footer {
           transition-duration: .5s;
 }
 
+/* PROJECT LIST - HOME PAGE */
+.project-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  row-gap: 20px;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-number {
+  font-family: "bluunext-bold";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  color: #A5A39C;
+  margin-right: 3vw;
+}
+
+.project-title {
+  font-family: "bluunext-bold";
+  src: url("/assets/bluunext-bold.ttf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  color: #212220;
+  font-size: 70px;
+  margin-right: 3vw;
+  z-index: 1;
+}
+
+.project-title-detail {
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: #212220;
+  margin-right: 1vw;
+}
+
+.arrow {
+  fill: #212220;
+  height: 10px;
+  width: 10px;
+}
+
+/* IMAGE PREVIEW (ON HOVER) */
+/* CONSTRUCTION */
+.construction-page-container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "bluunext-bold";
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.construction-page-container p {
+  margin-bottom: 40px;
+}
+
 /* LINK LETTER ROLL */
 .grid__item {
   display: -webkit-box;
@@ -229,7 +330,6 @@ footer {
 /* CURSOR */
 .cursor {
   position: absolute;
-  background-color: #fff;
   width: 6px;
   height: 6px;
   border-radius: 100%;
@@ -260,7 +360,6 @@ footer {
 
 .cursor-follower {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.3);
   width: 20px;
   height: 20px;
   border-radius: 100%;
@@ -287,6 +386,34 @@ footer {
 
 .cursor-follower.hovered {
   opacity: 0.08;
+}
+
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #212220;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 50px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 1px #212220;
+          box-shadow: 0 0 0 1px #212220;
+  pointer-events: none;
+  -webkit-transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 800px) {

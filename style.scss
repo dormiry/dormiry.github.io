@@ -1,12 +1,15 @@
 
 * {box-sizing: border-box; margin: 0; padding: 0;}
 img {width: 100%;}
+a {
+    text-decoration: none;
+}
 
 $color-bg: #F0F0EE;
 $color-text: #212220;
-$color-text-grey: #A6A6A6;
+$color-text-grey: #A5A39C;
 $color-text-green: #516141;
-$main-w: 80vw;
+$main-w: 90vw;
 
  /* FONTS */
 
@@ -78,6 +81,7 @@ body {
     color: $color-text;
 }
 
+/* FOOTER */
 footer {
     width: 100%;
     height: 70px;
@@ -99,6 +103,8 @@ footer {
     text-transform: uppercase;
     font-size: 1.05em;
 }
+
+/* CONTACT PAGE */
 
 .contact {
     width: 100%;
@@ -143,6 +149,121 @@ footer {
     transition-duration: .5s;
 }
 
+/* PROJECT LIST - HOME PAGE */
+
+.project-list {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+}
+
+.project {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-number {
+    font-family: "bluunext-bold";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: $color-text-grey;
+    margin-right: 3vw;
+}
+
+.project-title {
+    font-family: "bluunext-bold";
+    src: url("/assets/bluunext-bold.ttf");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+    color: $color-text;
+    font-size: 70px;
+    margin-right: 3vw;
+    z-index: 1;
+}
+
+.project-title-detail {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    color: $color-text;
+    margin-right: 1vw;
+}
+
+.arrow {
+    fill: $color-text;
+    height: 10px;
+    width: 10px;
+}
+
+/* IMAGE PREVIEW (ON HOVER) */
+
+// .link {
+//     z-index: 1;
+//     transition: color 275ms ease;
+//     &:hover {
+//       color: $black;
+//       ~ .hover-container {
+//         .image-container {
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
+  
+//   .image-container {
+//     z-index: -2;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 150px;
+//     height: 150px;
+//     opacity: 0;
+//     transition: opacity 250ms ease;
+//   }
+  
+//   .image-inner {
+//     position: absolute;
+//     top: -75px;
+//     left: -75px;
+//     width: 150px;
+//     height: 150px;
+//   }
+  
+//   .link-image {
+//     display: block;
+//     max-width: 100%;
+//     width: 150px;
+//     height: 150px;
+//     object-fit: cover;
+//     object-position: center;
+//   }
+
+/* CONSTRUCTION */
+
+.construction-page-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: "bluunext-bold";
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.construction-page-container p {
+    margin-bottom: 40px;
+}
 
 /* LINK LETTER ROLL */
   .grid__item {
@@ -187,7 +308,6 @@ footer {
 
   .cursor {
     position: absolute;
-    background-color: #fff;
     width: 6px;
     height: 6px;
     border-radius: 100%;
@@ -211,7 +331,6 @@ footer {
 
 .cursor-follower {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.3);
     width: 20px;
     height: 20px;
     border-radius: 100%;
@@ -232,6 +351,39 @@ footer {
         opacity: 0.08;
     }
 }
+
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: $color-text;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 50px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px $color-text;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
+}
+
+
+
+
+
+
 
 @media only screen and (max-width: 800px) { 
 

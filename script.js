@@ -51,47 +51,56 @@ function letterAnimation(el, cls) {
 
 // CURSOR
 
-// var cursor = $(".cursor"),
-//     follower = $(".cursor-follower");
+const cursor = document.querySelector("#cursor");
+const cursorBorder = document.querySelector("#cursor-border");
+const cursorPos = { x: 0, y: 0 };
+const cursorBorderPos = { x: 0, y: 0 };
 
-// var posX = 0,
-//     posY = 0;
+document.addEventListener("mousemove", (e) => {
+  cursorPos.x = e.clientX;
+  cursorPos.y = e.clientY;
 
-// var mouseX = 0,
-//     mouseY = 0;
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
 
-// TweenMax.to({}, 0.016, {
-//   repeat: -1,
-//   onRepeat: function() {
-//     posX += (mouseX - posX) / 9;
-//     posY += (mouseY - posY) / 9;
-    
-//     TweenMax.set(follower, {
-//         css: {    
-//         left: posX - 12,
-//         top: posY - 12
-//         }
-//     });
-    
-//     TweenMax.set(cursor, {
-//         css: {    
-//         left: mouseX,
-//         top: mouseY
-//         }
-//     });
-//   }
-// });
+requestAnimationFrame(function loop() {
+  const easting = 8;
+  cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
+  cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
+  cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+  requestAnimationFrame(loop);
+});
 
-// $(document).on("mousemove", function(e) {
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
-// });
+document.querySelectorAll("[data-cursor]").forEach((item) => {
+  item.addEventListener("mouseover", (e) => {
+    if (item.dataset.cursor === "pointer") {
+      cursorBorder.style.setProperty("--size", "30px");
+    }
+    if (item.dataset.cursor === "pointer2") {
+      cursorBorder.style.backgroundColor = "white";
+      cursorBorder.style.mixBlendMode = "difference";
+      cursorBorder.style.setProperty("--size", "80px");
+      cursor.style.opacity = "0";
+    }
+  });
+  item.addEventListener("mouseout", (e) => {
+    cursorBorder.style.backgroundColor = "unset";
+    cursorBorder.style.mixBlendMode = "unset";
+    cursorBorder.style.setProperty("--size", "50px");
+    cursor.style.opacity = "1";
+  });
+});
 
-// $(".link").on("mouseenter", function() {
-//     cursor.addClass("active");
-//     follower.addClass("active");
-// });
-// $(".link").on("mouseleave", function() {
-//     cursor.removeClass("active");
-//     follower.removeClass("active");
-// });
+
+// Preview Image
+
+// const linkImage = document.querySelector('.link-image');
+
+// function showImgContent(e) {
+//   x = e.clientX;
+//   y = e.clientY;
+//   linkImage.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+
+// }
+
+// document.addEventListener('mousemove', showImgContent);
