@@ -4,43 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Audrey Mackey - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-border"></div>
+    
 
+<main>
+
+
+<div id="cursor"></div>
+<div id="cursor-border"></div>
+
+<!-- NAVIGATION -->
     <div class="navigation">
-        <a class="home-link" href="#">a.</a>
+        <a data-cursor="pointer" class="home-link" href="home.html">a.</a>
         <nav>
             <ul class="nav-links">
-                <li data-cursor="pointer" class="grid__item"><a class="letter-wrap active" data-duration="0.8" href="home.html">WORK</a></li>
-                <li data-cursor="pointer" class="grid__item"><a class="letter-wrap" data-duration="0.8" href="#">ABOUT</a></li>
-                <li data-cursor="pointer" class="grid__item"><a class="letter-wrap" data-duration="0.8" href="#">CONTACT</a></li>
+                <li data-cursor="pointer" class="grid__item"><a class="letter-wrap" data-duration="0.8" href="#about">ABOUT</a></li>
+                <li data-cursor="pointer" class="grid__item"><a class="letter-wrap" data-duration="0.8" href="#work">WORK</a></li>
+                <li data-cursor="pointer" class="grid__item"><a class="letter-wrap" data-duration="0.8" href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </div>
 
-    <section class="project-list">
-        <div class="project">
-            <span class="project-number">01</span><h2 data-cursor="pointer2" class="project-title link">American Dream Network</h2><h3 class="project-title-detail">Interactive Design & Development</h3><svg class="arrow" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
-            <!-- <span class="hover-container">
-                <span class="image-container">
-                  <span class="image-inner">
-                    <img class="link-image" src="imgs/american-dream-network-preview.jpg" alt="Preview Image"/>
-                  </span>
-                </span>
-              </span> -->
-        </div>
+<!-- HELLO WORLD - TEXT -->
+    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+
+<!-- ABOUT ME -->
+<section id="about" class="about-me">
+    <p class="about__subhead">HELLO WORLD</p>
+    <p class="about__intro">
+        I’m Audrey Mackey, a passionate<span class="about__span1">ly awkward</span> human-being that seeks to bridge the gap between <span class="about__span2">web design</span> & <span class="about__span2">development</span>
+    </p>
+    <a class="button__view-work" href="#work"><div data-cursor="pointer2">EXPLORE MY WORK</div></a>
+    <svg class="about__arrow" viewBox="0 0 40 40" fill="none"><path d="M15.2 39.52V40H20.96V39.52C20.96 34.64 22.88 30 26.32 26.48C29.76 22.96 34.4 21.04 39.28 20.96H39.68V19.92H39.28H39.2C34.32 19.84 29.76 17.92 26.32 14.4C22.88 10.96 20.96 6.32 20.96 1.36V0.879998H15.2V1.36C15.2 6.64 17.68 11.52 22.24 15.2C24.96 17.36 28.16 18.96 31.68 19.92H0.8V20.96H31.68C28.16 21.92 24.96 23.52 22.24 25.68C17.68 29.36 15.2 34.32 15.2 39.52Z"></path></svg>
+</section>
+
+<!-- PROJECT LIST -->
+    <section id="work" class="project" >
+            <ul class="project-list">
+                <!-- PROJECT 1 -->
+                <li class="list">
+                    <div class="li__item">
+                        <span class="project-number">01</span>
+                        <a data-cursor="pointer2" class="project-title" href="#">American Dream Network</a>
+                    </div>
+                    <div class="li__hover">
+                        <span class="project-title-detail">Interactive Design & Development</span>
+                        <svg class="li__arrow"viewBox="0 0 40 40" fill="none"><path d="M15.2 39.52V40H20.96V39.52C20.96 34.64 22.88 30 26.32 26.48C29.76 22.96 34.4 21.04 39.28 20.96H39.68V19.92H39.28H39.2C34.32 19.84 29.76 17.92 26.32 14.4C22.88 10.96 20.96 6.32 20.96 1.36V0.879998H15.2V1.36C15.2 6.64 17.68 11.52 22.24 15.2C24.96 17.36 28.16 18.96 31.68 19.92H0.8V20.96H31.68C28.16 21.92 24.96 23.52 22.24 25.68C17.68 29.36 15.2 34.32 15.2 39.52Z"></path></svg>
+                    </div>
+                </li>
+                <!-- PROJECT 2 -->
+                <li class="list">
+                    <div class="li__item">
+                        <span class="project-number">02</span>
+                        <a data-cursor="pointer2" class="project-title" href="#">Rental App</a>
+                    </div>
+                    <div class="li__hover">
+                        <span class="project-title-detail">UX & UI</span>
+                        <svg class="li__arrow"viewBox="0 0 40 40" fill="none"><path d="M15.2 39.52V40H20.96V39.52C20.96 34.64 22.88 30 26.32 26.48C29.76 22.96 34.4 21.04 39.28 20.96H39.68V19.92H39.28H39.2C34.32 19.84 29.76 17.92 26.32 14.4C22.88 10.96 20.96 6.32 20.96 1.36V0.879998H15.2V1.36C15.2 6.64 17.68 11.52 22.24 15.2C24.96 17.36 28.16 18.96 31.68 19.92H0.8V20.96H31.68C28.16 21.92 24.96 23.52 22.24 25.68C17.68 29.36 15.2 34.32 15.2 39.52Z"></path></svg>
+                    </div>
+                </li>
+                <!-- PROJECT 3 -->
+                <li class="list">
+                    <div class="li__item">
+                        <span class="project-number">03</span>
+                        <a data-cursor="pointer2" class="project-title" href="#">Leyendecker Biography</a>
+                    </div>
+                    <div class="li__hover">
+                        <span class="project-title-detail">Narrative Web Design & Development</span>
+                        <svg class="li__arrow"viewBox="0 0 40 40" fill="none"><path d="M15.2 39.52V40H20.96V39.52C20.96 34.64 22.88 30 26.32 26.48C29.76 22.96 34.4 21.04 39.28 20.96H39.68V19.92H39.28H39.2C34.32 19.84 29.76 17.92 26.32 14.4C22.88 10.96 20.96 6.32 20.96 1.36V0.879998H15.2V1.36C15.2 6.64 17.68 11.52 22.24 15.2C24.96 17.36 28.16 18.96 31.68 19.92H0.8V20.96H31.68C28.16 21.92 24.96 23.52 22.24 25.68C17.68 29.36 15.2 34.32 15.2 39.52Z"></path></svg>
+                    </div>
+                </li>
+                <!-- PROJECT 4 -->
+                <li class="list li__last-item">
+                    <div class="li__item">
+                        <span class="project-number">04</span>
+                        <a data-cursor="pointer2" class="project-title" href="symphony-branding.html">Symphony Branding</a>
+                    </div>
+                    <div class="li__hover">
+                        <span class="project-title-detail">Event Branding</span>
+                        <svg class="li__arrow"viewBox="0 0 40 40" fill="none"><path d="M15.2 39.52V40H20.96V39.52C20.96 34.64 22.88 30 26.32 26.48C29.76 22.96 34.4 21.04 39.28 20.96H39.68V19.92H39.28H39.2C34.32 19.84 29.76 17.92 26.32 14.4C22.88 10.96 20.96 6.32 20.96 1.36V0.879998H15.2V1.36C15.2 6.64 17.68 11.52 22.24 15.2C24.96 17.36 28.16 18.96 31.68 19.92H0.8V20.96H31.68C28.16 21.92 24.96 23.52 22.24 25.68C17.68 29.36 15.2 34.32 15.2 39.52Z"></path></svg>
+                    </div>
+                </li>
+            </ul>
     </section>
 
+<!-- CONTACT -->
 
+<div id="contact" class="contact-container">
+    <p class="contact-text">GET IN TOUCH</p>
+    <a data-cursor="pointer2" class="email-link"href="mailto:aud@audreymackey.com">aud@audreymackey.com</a>
+</div>
+        
+<!-- FOOTER -->
     <footer>
         <nav>
             <ul class="nav-links">
                 <li data-cursor="pointer" class="grid__item"><a target="_blank" class="letter-wrap" data-duration="0.8" data-stagger="-0.025" href="https://www.linkedin.com/in/audrey-mackey-5b9815182/">LINKEDIN</a></li>
-                <li data-cursor="pointer" class="grid__item"><a target="_blank" class="letter-wrap" data-duration="0.8" data-stagger="-0.025" href="https://www.instagram.com/_dormiry/">INSTAGRAM</a></li>
+                <li data-cursor="pointer" class="grid__item"><a target="_blank" class="letter-wrap" data-duration="0.8" data-stagger="-0.025" href="https://www.instagram.com/_audart/">INSTAGRAM</a></li>
                 <li data-cursor="pointer" class="grid__item"><a target="_blank" class="letter-wrap" data-duration="0.8" data-stagger="-0.025" href="https://www.behance.net/amackey">BEHANCE</a></li>
             </ul>
         </nav>
@@ -49,13 +114,19 @@
             <p class="footer-text">&copy; 2022</p>
         </div>
      </footer>
+</main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-    <script
-                 src="https://code.jquery.com/jquery-3.6.0.js"
-                 integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-                 crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<script
+             src="https://code.jquery.com/jquery-3.6.0.js"
+             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+             crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="script/jquery.waypoints.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+
+<script src="script/script.js"></script>
+<script src="script/waypoints.js"></script>
 </body>
 </html>

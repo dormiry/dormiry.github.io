@@ -1,0 +1,198 @@
+$color-bg: #F0F0EE;
+$color-text: #212220;
+$color-text-grey: #A5A39C;
+$color-text-green: #516141;
+
+@import url("https://use.typekit.net/lxp1wlv.css");
+
+@font-face {
+    font-family: "bluunext-bold";
+    src: url("/assets/bluunext-bold.ttf");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+} 
+
+@font-face {
+    font-family: "bluunext-bold-italic";
+    src: url("/assets/bluunext-bolditalic.ttf");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+} 
+
+// HEADER
+.header-img {
+    width: 100vw;
+}
+
+.project-info {
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// TYPE STYLES
+ h3 {
+    font-family: "bluunext-bold";
+    color: $color-text-grey;
+    opacity: .3;
+    font-size: 8rem;
+    margin-left: -27px;
+ }
+
+ h1 {
+    font-family: "bluunext-bold";
+    z-index: 99;
+    color: $color-text;
+    font-size: 2rem;
+    white-space: nowrap;
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-left: -140px;
+ }
+
+ h2 {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 00;
+    font-style: normal;
+    font-size: 1rem;
+    color: $color-text;
+    margin-right: 40px;
+ }
+
+.proj-p {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: $color-text;
+    margin-right: 60px;
+ }
+
+// CONTAINER FORMAT
+
+.project-title-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    justify-content: space-between;
+
+    .title-line {
+        height: 11px;
+        width: 70%;
+        border-bottom: 1px $color-text-grey solid;
+    }
+}
+
+.project-details-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 30px;
+
+    .info {
+        display: flex;
+    }
+}
+
+.project-summary-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 30px;
+
+    .summary {
+        width: 65%;
+        max-width: 700px;
+    }
+}
+
+.project-images {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    
+
+    .img0104 {
+        // width: 500px;
+    }
+
+    .img0204 {
+    }
+}
+
+.next-project {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    height: 30vh;
+    justify-content: center;
+
+    .next-subhead {
+        font-family: 'futura-pt', sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.2rem;
+        color: $color-text;
+    }
+
+    .next-title a {
+        font-family: "bluunext-bold";
+        font-weight: 600;
+        font-style: normal;
+        color: $color-text;
+        font-size: 4rem;
+        text-align: center;
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    h3 {
+        font-size: 6rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-left: -100px;
+    }
+  
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .project-title-container .title-line {
+        visibility: hidden;
+    }
+    .project-info .project-details-container {
+        justify-content: flex-start;
+        flex-flow: column;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .project-info .project-details-container .info {
+        flex-flow: column;
+        margin-bottom: 40px;
+    }
+
+    .project-info .project-summary-container {
+        flex-flow: column;
+
+    }
+
+    .project-info .project-summary-container .summary {
+        width: 100%;
+    }
+    
+}

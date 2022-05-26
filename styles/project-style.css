@@ -1,0 +1,222 @@
+@import url("https://use.typekit.net/lxp1wlv.css");
+@font-face {
+  font-family: "bluunext-bold";
+  src: url("/assets/bluunext-bold.ttf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "bluunext-bold-italic";
+  src: url("/assets/bluunext-bolditalic.ttf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.header-img {
+  width: 100vw;
+}
+
+.project-info {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  font-family: "bluunext-bold";
+  color: #A5A39C;
+  opacity: .3;
+  font-size: 8rem;
+  margin-left: -27px;
+}
+
+h1 {
+  font-family: "bluunext-bold";
+  z-index: 99;
+  color: #212220;
+  font-size: 2rem;
+  white-space: nowrap;
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-left: -140px;
+}
+
+h2 {
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 00;
+  font-style: normal;
+  font-size: 1rem;
+  color: #212220;
+  margin-right: 40px;
+}
+
+.proj-p {
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #212220;
+  margin-right: 60px;
+}
+
+.project-title-container {
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project-title-container .title-line {
+  height: 11px;
+  width: 70%;
+  border-bottom: 1px #A5A39C solid;
+}
+
+.project-details-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-bottom: 30px;
+}
+
+.project-details-container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project-summary-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-bottom: 30px;
+}
+
+.project-summary-container .summary {
+  width: 65%;
+  max-width: 700px;
+}
+
+.project-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.next-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  height: 30vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.next-project .next-subhead {
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #212220;
+}
+
+.next-project .next-title a {
+  font-family: "bluunext-bold";
+  font-weight: 600;
+  font-style: normal;
+  color: #212220;
+  font-size: 4rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 6rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-left: -100px;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  .project-title-container .title-line {
+    visibility: hidden;
+  }
+  .project-info .project-details-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .project-info .project-details-container .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    margin-bottom: 40px;
+  }
+  .project-info .project-summary-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .project-info .project-summary-container .summary {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=project-style.css.map */
