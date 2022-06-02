@@ -1,5 +1,3 @@
-
-
 // LETTER WRAP ROLL
 const letterWrapClass = 'letter-wrap';
 const letterWrapElements = document.getElementsByClassName(letterWrapClass);
@@ -122,13 +120,7 @@ function consoleText(words, id, colors) {
         letterCount += x;
         waiting = false;
       }, 1000)
-    // } else if (letterCount === words[0].length + 1 && waiting === false) {
-    //   waiting = true;
-    //   window.setTimeout(function() {
-    //     x = -1;
-    //     letterCount += x;
-    //     waiting = false;
-    //   }, 1000)
+
     } else if (waiting === false) {
       target.innerHTML = words[0].substring(0, letterCount)
       letterCount += x;
@@ -147,88 +139,30 @@ function consoleText(words, id, colors) {
   }, 400)
 }
 
-// LOAD-IN SCREEN
 
-// function delay(n) {
-//   n = n || 2000;
-//   return new Promise((done) => {
-//       setTimeout(() => {
-//           done();
-//       }, n);
-//   });
-// }
 
-// function pageTransition() {
-//   var tl = gsap.timeline();
-//   tl.to(".loading-screen", {
-//       duration: 1.2,
-//       width: "100%",
-//       left: "0%",
-//       ease: "Expo.easeInOut",
-//   });
-
-//   tl.to(".loading-screen", {
-//       duration: 1,
-//       width: "100%",
-//       left: "100%",
-//       ease: "Expo.easeInOut",
-//       delay: 0.3,
-//   });
-//   tl.set(".loading-screen", { left: "-100%" });
-// }
-
-// function contentAnimation() {
-//   var tl = gsap.timeline();
-//   tl.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2 });
-// }
-
-// $(function () {
-//   barba.init({
-//       sync: true,
-
-//       transitions: [
-//           {
-//               async leave(data) {
-//                   const done = this.async();
-
-//                   pageTransition();
-//                   await delay(1000);
-//                   done();
-//               },
-
-//               async enter(data) {
-//                   contentAnimation();
-//               },
-
-//               async once(data) {
-//                   contentAnimation();
-//               },
-//           },
-//       ],
-//   });
-// });
 
 
 // WAYPOINTS
 
-var $aboutMe = $('.about-me');
+// var $aboutMe = $('.about-me');
 
-$aboutMe.waypoint(function(direction) {
-  if(direction == 'down') {
-    $aboutMe.addClass('about-me__animate');
-  } else {
-    $aboutMe.removeClass('about-me__animate');
-  }
+// $aboutMe.waypoint(function(direction) {
+//   if(direction == 'down') {
+//     $aboutMe.addClass('about-me__animate');
+//   } else {
+//     $aboutMe.removeClass('about-me__animate');
+//   }
   
-}, { offset: '70%'})
+// }, { offset: '70%'})
 
 
-var $projectList = $('.list');
+// var $projectList = $('.list');
 
-$projectList.waypoint(function(direction) {
-  if(direction == 'down') {
-    console.log('hello');
-    $projectList.addClass('project-list__animation');
-  } 
-}, { offset: '70%'})
+// $projectList.waypoint(function(direction) {
+//   if(direction == 'down') {
+//     console.log('hello');
+//     $projectList.addClass('project-list__animation');
+//   } 
+// }, { offset: '70%'})
 

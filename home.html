@@ -7,13 +7,15 @@
     <title>Audrey Mackey - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 </head>
-<body>
-    
 
-<main>
+<body data-barba="wrapper">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
 
+<main data-barba="container" data-barba-namespace="home-section">
 
 <div id="cursor"></div>
 <div id="cursor-border"></div>
@@ -44,10 +46,10 @@
 </section>
 
 <!-- PROJECT LIST -->
-    <section id="work" class="project" >
+    <section id="work" class="project ez-animate-group" data-animation-offset="50%">
             <ul class="project-list">
                 <!-- PROJECT 1 -->
-                <li class="list">
+                <li class="list ez-animate" data-animation="fadeInLeft">
                     <div class="li__item">
                         <span class="project-number">01</span>
                         <a data-cursor="pointer2" class="project-title" href="#">American Dream Network</a>
@@ -83,7 +85,7 @@
                 <li class="list li__last-item">
                     <div class="li__item">
                         <span class="project-number">04</span>
-                        <a data-cursor="pointer2" class="project-title" href="symphony-branding.html">Symphony Branding</a>
+                        <a data-cursor="pointer2" class="project-title" href="symphony-branding.html#top">Symphony Branding</a>
                     </div>
                     <div class="li__hover">
                         <span class="project-title-detail">Event Branding</span>
@@ -116,6 +118,7 @@
      </footer>
 </main>
 
+
 <!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 <script
@@ -123,10 +126,14 @@
              integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
              crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="script/jquery.waypoints.js"></script>
 <script src="https://unpkg.com/@barba/core"></script>
-
+<script src="script/jquery.waypoints.js"></script>
+<!-- <script src="script/easy-waypoint-animate.js"></script> -->
 <script src="script/script.js"></script>
-<script src="script/waypoints.js"></script>
 </body>
 </html>
+
+
+
+
+
